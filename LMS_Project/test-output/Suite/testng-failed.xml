@@ -4,15 +4,15 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="lms.test.LoginTest">
+      <class name="com.lnitest.LniTest">
         <methods>
           <include name="tearDown"/>
           <include name="login"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="LoginTest"/>
+          <include name="submitLniFormAndVerify"/>
         </methods>
-      </class> <!-- lms.test.LoginTest -->
+      </class> <!-- com.lnitest.LniTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

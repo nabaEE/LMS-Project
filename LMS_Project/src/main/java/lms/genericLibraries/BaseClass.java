@@ -2,6 +2,10 @@ package lms.genericLibraries;
 
 import java.io.IOException;
 import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,7 +16,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
 import lms.objectRepository.LoginPage;
 import lms.genericLibraries.WebDriverUtils;
 
@@ -20,6 +23,7 @@ public class BaseClass extends FileUtils
 {
 //Declaration of the driver
  public static WebDriver driver;	
+ protected static Logger log= LogManager.getLogger(BaseClass.class);
  WebDriverUtils wdu= new WebDriverUtils();
  @BeforeClass()
  @Parameters({"browser"})
@@ -56,12 +60,14 @@ public void login() throws IOException
  lms.objectRepository.LoginPage lp= PageFactory.initElements(driver, lms.objectRepository.LoginPage.class);
  //Calling the method declared in login page class
  lp.loginToPage(pObj.getProperty("USERNAME"), pObj.getProperty("PASSWORD"));
+ WebDriverUtils.waitForPageToLoad(driver);
+ driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
+ WebDriverUtils.waitForPageToLoad(driver);
  }
 @AfterMethod
 public void tearDown() throws Exception
 {
-		  driver.switchTo().frame(0); 
-		  lms.objectRepository.LoginPage lp=PageFactory.initElements(driver, lms.objectRepository.LoginPage.class);
+		 lms.objectRepository.LoginPage lp=PageFactory.initElements(driver, lms.objectRepository.LoginPage.class);
 		 //call the logout method declared in LoginPage
 		 lp.logOut();
 }

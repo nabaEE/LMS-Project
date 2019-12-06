@@ -26,7 +26,7 @@ public class WebDriverUtils
 	 * Wait for any element available in GUI
 	 * 
 	 */
-  public void waitForElementPresent(WebDriver driver, WebElement wb)
+  public static void waitForElementPresent(WebDriver driver, WebElement wb)
   {
 	  WebDriverWait wait= new WebDriverWait(driver, 20);
 	  wait.until(ExpectedConditions.visibilityOf(wb));

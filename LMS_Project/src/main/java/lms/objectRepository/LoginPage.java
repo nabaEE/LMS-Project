@@ -1,8 +1,8 @@
 package lms.objectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import lms.genericLibraries.BaseClass;
 import lms.genericLibraries.WebDriverUtils;
 
@@ -22,15 +22,15 @@ public class LoginPage
 	/************************************Utilization******************************************/
 	public void loginToPage(String username, String password)
 	{
-		BaseClass.driver.switchTo().frame(0);
-		
+		//BaseClass.driver.switchTo().frame(0);
+		BaseClass.driver.switchTo().frame(BaseClass.driver.findElement(By.xpath("//html//frameset//frameset//frame")));
 		userNameEdt.sendKeys(username);
 		passWordEdt.sendKeys(password);
 		loginBtn.click();
 	 }
 	  public void logOut()
 	  {
-	  WebDriverUtils.waitForPageToLoad(BaseClass.driver );
+	  WebDriverUtils.waitForElementPresent(BaseClass.driver, dropDownArrow);
 	  dropDownArrow.click();
 	  logoutBtn.click();
 	  }
