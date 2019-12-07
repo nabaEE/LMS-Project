@@ -62,7 +62,6 @@ public void login() throws IOException
  lp.loginToPage(pObj.getProperty("USERNAME"), pObj.getProperty("PASSWORD"));
  WebDriverUtils.waitForPageToLoad(driver);
  driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
- WebDriverUtils.waitForPageToLoad(driver);
  }
 @AfterMethod
 public void tearDown() throws Exception

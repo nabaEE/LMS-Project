@@ -17,7 +17,7 @@ public static void submitLniFormAndVerify()
  //Call the My Dashboard page
  MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
  //Click on admin icon
- WebDriverUtils.waitForPageToLoad(driver);
+ WebDriverUtils.waitForElementPresent(driver, mdp.getAdminIcon());
  mdp.getAdminIcon().click();
  //Click on configuration setup
  mdp.getConfigurationSetupButton().click();
