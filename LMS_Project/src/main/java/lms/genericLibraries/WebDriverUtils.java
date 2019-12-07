@@ -30,7 +30,6 @@ public class WebDriverUtils
   {
 	  WebDriverWait wait= new WebDriverWait(driver, 30);
 	  wait.until(ExpectedConditions.elementToBeClickable(wb));
-	  System.out.println("/nElement is visible after Explicit Wait\n");
    }
  
  /**
