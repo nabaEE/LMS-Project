@@ -59,6 +59,8 @@ public class LNI_ManagementPage
 	private WebElement courseCoverageEditbox;
 	@FindBy(id="Business_Benifits")
 	private WebElement businessBenefitsEditbox;
+	@FindBy(xpath="//tbody[@id='TBody']/tr[1]/td[1]/a/i")
+	private WebElement viewButton;
 	@FindBy(id="Submit")
 	private WebElement submitButton;
 	@FindBy(xpath="//tbody[@id='TBody']/tr[1]/td[2]/text()")
@@ -66,6 +68,10 @@ public class LNI_ManagementPage
 	
 	
    /*************Getters Usage****************************/	
+	public WebElement getViewButton()
+	{
+		return viewButton;
+	}
 	public WebElement getsubmittedLniTitle()
 	{
 		return submittedLniTitle;
