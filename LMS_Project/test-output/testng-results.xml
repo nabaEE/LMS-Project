@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="51102" started-at="2019-12-11T12:32:11Z" finished-at="2019-12-11T12:33:02Z">
+  <suite name="Suite" duration-ms="76163" started-at="2019-12-13T07:21:09Z" finished-at="2019-12-13T07:22:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="51102" started-at="2019-12-11T12:32:11Z" finished-at="2019-12-11T12:33:02Z">
+    <test name="Test" duration-ms="76163" started-at="2019-12-13T07:21:09Z" finished-at="2019-12-13T07:22:26Z">
       <class name="com.lnitest.LniTest">
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="openBrowser" is-config="true" duration-ms="7969" started-at="2019-12-11T12:32:11Z" finished-at="2019-12-11T12:32:19Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="openBrowser" is-config="true" duration-ms="33415" started-at="2019-12-13T07:21:09Z" finished-at="2019-12-13T07:21:43Z">
           <params>
             <param index="0">
               <value>
@@ -18,31 +18,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="login" is-config="true" duration-ms="3838" started-at="2019-12-11T12:32:19Z" finished-at="2019-12-11T12:32:23Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="login" is-config="true" duration-ms="4780" started-at="2019-12-13T07:21:43Z" finished-at="2019-12-13T07:21:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="submitLniFormAndVerify()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="submitLniFormAndVerify" duration-ms="22017" started-at="2019-12-11T12:32:23Z" finished-at="2019-12-11T12:32:45Z">
+        <test-method status="PASS" signature="submitLniFormAndVerify()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="submitLniFormAndVerify" duration-ms="20612" started-at="2019-12-13T07:21:48Z" finished-at="2019-12-13T07:22:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitLniFormAndVerify -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="tearDown" is-config="true" duration-ms="991" started-at="2019-12-11T12:32:45Z" finished-at="2019-12-11T12:32:46Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="tearDown" is-config="true" duration-ms="1076" started-at="2019-12-13T07:22:08Z" finished-at="2019-12-13T07:22:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="login" is-config="true" duration-ms="1402" started-at="2019-12-11T12:32:46Z" finished-at="2019-12-11T12:32:47Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="login" is-config="true" duration-ms="1121" started-at="2019-12-13T07:22:09Z" finished-at="2019-12-13T07:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="view_Lni_Summary()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="view_Lni_Summary" duration-ms="9902" started-at="2019-12-11T12:32:47Z" finished-at="2019-12-11T12:32:57Z">
+        <test-method status="PASS" signature="view_Lni_Summary()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="view_Lni_Summary" duration-ms="8359" started-at="2019-12-13T07:22:10Z" finished-at="2019-12-13T07:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- view_Lni_Summary -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="tearDown" is-config="true" duration-ms="511" started-at="2019-12-11T12:32:57Z" finished-at="2019-12-11T12:32:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="tearDown" is-config="true" duration-ms="517" started-at="2019-12-13T07:22:19Z" finished-at="2019-12-13T07:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="closeBrowser" is-config="true" duration-ms="4448" started-at="2019-12-11T12:32:58Z" finished-at="2019-12-11T12:33:02Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.lnitest.LniTest@48ae9b55]" name="closeBrowser" is-config="true" duration-ms="6252" started-at="2019-12-13T07:22:19Z" finished-at="2019-12-13T07:22:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

@@ -19,7 +19,7 @@ public class LniTest extends BaseClass
 public static void submitLniFormAndVerify() throws InterruptedException
 {
  log.debug("---------submitLniFormAndVerify :Test Started-----------");
- String expLniTitle="Dhtml advance";
+ String expLniTitle="SQL advance";
  //Call the My Dashboard page
  MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
  Thread.sleep(3000);
@@ -49,7 +49,7 @@ public static void submitLniFormAndVerify() throws InterruptedException
  //Enter project name
  lmp.getProjectNameEditbox().sendKeys("dhtml setup");
  //Enter the project code
- lmp.getProjectCode().sendKeys("70");
+ lmp.getProjectCode().sendKeys("80");
  //Click on sponsorer dropdown and pick trianz university
  lmp.getSponsorerDropdown().click();
  lmp.getSelectTrianzUniversity().click();
@@ -117,7 +117,7 @@ public static void submitLniFormAndVerify() throws InterruptedException
  }
 
 @Test()
-public static void view_Lni_Summary() throws InterruptedException
+public static void view_Lni_SummaryAndVerify() throws InterruptedException
 {
 log.debug("---------view_Lni_Summary :Test started-----------");
 MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
@@ -147,38 +147,41 @@ log.info("The title is :"+lsp.getLniSummaryTitle().getText());
 //Close the Summay page
 lsp.getCloseLniSummaryPage().click();
 log.info("---------view_Lni_Summary :Test ended-----------");
- 
+  }
+@Test()
+public static void modifyLniDetailsAndVerify() throws InterruptedException
+{
+	log.debug("---------view_Lni_Summary :Test started-----------");
+	MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
+	Thread.sleep(3000);
+	//Click on admin icon
+	WebDriverUtils.waitForElementPresent(driver, mdp.getAdminIcon());
+	mdp.getAdminIcon().click();
+	//Click on configuration setup
+	mdp.getConfigurationSetupButton().click();
+	//Call Confirguration setup page
+	ConfigurationSetupPage csp= PageFactory.initElements(driver, ConfigurationSetupPage.class);
+	//Click on LMS Data setup
+	csp.getLmsDataSetup().click();
+	//Click on lnis Management
+	Thread.sleep(3000);
+	WebDriverUtils.waitForElementPresent(driver, csp.getLni_ManagementButton());
+	csp.getLni_ManagementButton().click();
+	//Call LNI Management page
+	LNI_ManagementPage lmp= PageFactory.initElements(driver, LNI_ManagementPage.class);
+	//Click edit button
+	Thread.sleep(2000);
+	lmp.getEditLniButton().click();
+	//Call LNI summary page
+	LniSummaryPage lsp= PageFactory.initElements(driver, LniSummaryPage.class);
+	//Click on Lni Summary Edit icon
+	lsp.getLniSummaryEditButton().click();
+	
+	
+	
+	
+	
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

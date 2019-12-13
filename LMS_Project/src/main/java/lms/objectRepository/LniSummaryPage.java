@@ -18,11 +18,17 @@ private WebElement remarksEditbox;
 private WebElement lniSummaryTitle;
 @FindBy(xpath="//div[@id='PopUpCont']/div[1]/button/i")
 private WebElement closeLniSummaryPage;
+@FindBy(xpath="//form[@id='E2ProForm_1994']/div/div[1]/div/fieldset/legend/span/i")
+private WebElement lniSummaryEditButton;
 	
 	
 	
 	
 /***************Getters Usage*************/
+public WebElement getLniSummaryEditButton()
+{
+	return lniSummaryEditButton;
+}
 public WebElement getCloseLniSummaryPage()
 {
 	return closeLniSummaryPage;

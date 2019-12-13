@@ -1,2 +1,4 @@
-18:02:57.568 [main] INFO  lms.genericLibraries.BaseClass - The title is :LNI SUMMARY
-18:02:57.803 [main] INFO  lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test ended-----------
+12:52:10.907 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------
+12:52:18.915 [main] DEBUG lms.genericLibraries.BaseClass - --------Verify the LNI Summary page--------
+12:52:18.991 [main] INFO  lms.genericLibraries.BaseClass - The title is :LNI SUMMARY
+12:52:19.263 [main] INFO  lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test ended-----------
