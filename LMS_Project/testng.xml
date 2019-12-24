@@ -9,11 +9,10 @@
   <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.lnitest.LniTest">
-      <methods>
-      <include name="submitLniFormAndVerify"></include>
-      <include name="view_Lni_Summary"></include>
-      </methods>
+      <!-- <methods>
+      <include name="verifyLearningNeedDescriptionBlankError"></include>
+      </methods> -->
       </class>
     </classes>
-</test> <!-- Test -->
-</suite> <!-- Suite -->
+</test>
+</suite>

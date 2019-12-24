@@ -1,5 +1,0 @@
-12:51:48.111 [main] DEBUG lms.genericLibraries.BaseClass - ---------submitLniFormAndVerify :Test Started-----------
-12:52:05.687 [main] DEBUG lms.genericLibraries.BaseClass - Capture the submitted LNI Title
-12:52:06.692 [main] DEBUG lms.genericLibraries.BaseClass - -----------Verify the submitted LNI Title-------------
-12:52:06.703 [main] INFO  lms.genericLibraries.BaseClass - Submitted LNI title is :SQL advance
-12:52:08.704 [main] INFO  lms.genericLibraries.BaseClass - ---------submitLniFormAndVerify :Test ended-----------

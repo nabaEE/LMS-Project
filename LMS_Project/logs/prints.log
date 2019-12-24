@@ -1,4 +1,5 @@
-12:52:10.907 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------
-12:52:18.915 [main] DEBUG lms.genericLibraries.BaseClass - --------Verify the LNI Summary page--------
-12:52:18.991 [main] INFO  lms.genericLibraries.BaseClass - The title is :LNI SUMMARY
-12:52:19.263 [main] INFO  lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test ended-----------
+20:11:09.668 [main] DEBUG lms.genericLibraries.BaseClass - ---------verifyLearningNeedDescriptionBlankError :Test Started-----------
+20:13:23.466 [main] DEBUG lms.genericLibraries.BaseClass - ---------verifyLearningNeedDescriptionBlankError :Test Started-----------
+20:13:41.175 [main] INFO  lms.genericLibraries.BaseClass - Actual error is :Learning Need Description cannot be empty
+20:13:41.175 [main] INFO  lms.genericLibraries.BaseClass - ---------verifyLearningNeedDescriptionBlankError :Test ended----------
+20:14:20.296 [main] DEBUG lms.genericLibraries.BaseClass - ---------submitLniFormAndVerify :Test Started-----------

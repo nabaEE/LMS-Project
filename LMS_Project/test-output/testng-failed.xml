@@ -10,10 +10,23 @@
     <classes>
       <class name="com.lnitest.LniTest">
         <methods>
+          <include name="verifyDurationEditboxBlankError"/>
           <include name="tearDown"/>
+          <include name="modifyLniDetailsAndVerify"/>
+          <include name="verifyLniTitleBlankError"/>
           <include name="login"/>
           <include name="closeBrowser"/>
+          <include name="validatePriorityBlankError"/>
+          <include name="verifyProjectNameBlankError"/>
+          <include name="verifyLearningNeedDescriptionBlankError"/>
+          <include name="checkCurrentExpertiseBlankError"/>
+          <include name="verifyLearningTypeBlankError"/>
+          <include name="verifyPeopleEditboxBlankError"/>
+          <include name="verifySponsorerBlankErr"/>
           <include name="openBrowser"/>
+          <include name="validateClassificationBlankError"/>
+          <include name="verifyProjectCodeBlankError"/>
+          <include name="view_Lni_SummaryAndVerify"/>
           <include name="submitLniFormAndVerify"/>
         </methods>
       </class> <!-- com.lnitest.LniTest -->

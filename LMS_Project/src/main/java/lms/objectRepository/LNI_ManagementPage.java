@@ -9,7 +9,7 @@ public class LNI_ManagementPage
 	
 	@FindBy(xpath="//div[@id='AppsMenuRow']/div/div/a[4]/i")
 	private WebElement addNewButton;
-	@FindBy(xpath="//tbody[@id='TBody']/tr[1]/td[1]/span/i")
+	@FindBy(xpath="//tbody[@id='TBody']/tr[1]/td[1]/span")
 	private WebElement editLniButton;
 	@FindBy(id="LNI_Title")
 	private WebElement lniTitleEditbox;
@@ -55,7 +55,7 @@ public class LNI_ManagementPage
 	private WebElement currencyDropdown;
 	@FindBy(xpath="//div[@id='div_Org_Currencies']/div/ul/li[3]/span")
 	private WebElement pickCurrencyINR;
-	@FindBy(id="LNI_Description")
+	@FindBy(id="Error_LNI_Description")
 	private WebElement learningNeedDescription;
 	@FindBy(id="Course_Coverage")
 	private WebElement courseCoverageEditbox;
@@ -67,9 +67,79 @@ public class LNI_ManagementPage
 	private WebElement submitButton;
 	@FindBy(xpath="//tbody[@id='TBody']/tr[1]/td[2]/text()")
 	private WebElement submittedLniTitle;
+	@FindBy(id="Error_LNI_Title")
+	private WebElement lniTitleBlankError;
+	@FindBy(id="Error_Project_Name")
+	private WebElement projectNameBlankErr;
+	@FindBy(id="Error_Project_Code")
+	private WebElement projectCodeBlankErr;
+	@FindBy(id="Error_SponsoredBy")
+	private WebElement sponsorerBlankErr;
+	@FindBy(id="Error_LearningCourse_Type")
+	private WebElement learningTypeBlankErr;
+	@FindBy(id="Error_LearningCourse_Category")
+	private WebElement scopeBlankErr;
+	@FindBy(id="Error_LNI_Classification")
+	private WebElement classificationBlankErr;
+	@FindBy(id="Error_Priority_Level")
+	private WebElement priorityLevelBlankErr;
+	@FindBy(id="Error_Duration")
+	private WebElement durationBlankErr;
+	@FindBy(id="Error_NoOf_Partcipants")
+	private WebElement peopleBlankErr;
+	@FindBy(id="Error_Current_Expertise")
+	private WebElement currentExpertiseBlankErr;
+	@FindBy(id="Error_LNI_Description")
+	private WebElement lniDescriptionEditboxBlankErr;
+	@FindBy(xpath="//i[text()='close']")
+	private WebElement closePopupWin;
 	
 	
-   /*************Getters Usage****************************/	
+   
+/*************Getters Usage****************************/	
+	public WebElement getClosePopupWin()
+	{
+		return closePopupWin;
+	}
+	public WebElement getSubmittedLniTitle() {
+		return submittedLniTitle;
+	}
+	public WebElement getLniTitleBlankError() {
+		return lniTitleBlankError;
+	}
+	public WebElement getProjectNameBlankErr() {
+		return projectNameBlankErr;
+	}
+	public WebElement getProjectCodeBlankErr() {
+		return projectCodeBlankErr;
+	}
+	public WebElement getSponsorerBlankErr() {
+		return sponsorerBlankErr;
+	}
+	public WebElement getLearningTypeBlankErr() {
+		return learningTypeBlankErr;
+	}
+	public WebElement getScopeBlankErr() {
+		return scopeBlankErr;
+	}
+	public WebElement getClassificationBlankErr() {
+		return classificationBlankErr;
+	}
+	public WebElement getPriorityLevelBlankErr() {
+		return priorityLevelBlankErr;
+	}
+	public WebElement getDurationBlankErr() {
+		return durationBlankErr;
+	}
+	public WebElement getPeopleBlankErr() {
+		return peopleBlankErr;
+	}
+	public WebElement getCurrentExpertiseBlankErr() {
+		return currentExpertiseBlankErr;
+	}
+	public WebElement getLniDescriptionEditboxBlankErr() {
+		return lniDescriptionEditboxBlankErr;
+	}
 	public WebElement getEditLniButton()
 	{
 		return editLniButton;
