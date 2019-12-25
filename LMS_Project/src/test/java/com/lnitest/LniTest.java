@@ -19,11 +19,11 @@ import lms.objectRepository.MyDashboardPage;
 public class LniTest extends BaseClass
 {
 //1. Fill in the LNI form then click on submit and verify.
-@Test(priority=-1)
+@Test(groups="Smoke", priority=-1)
 public static void submitLniFormAndVerify() throws InterruptedException
 {
  log.debug("---------submitLniFormAndVerify :Test Started-----------");
- String expLniTitle="Jdk8";
+ String expLniTitle="Google Cloud";
  //Call the My Dashboard page
  MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
  Thread.sleep(3000);
@@ -361,7 +361,7 @@ public static void verifyProjectNameBlankError() throws InterruptedException
 	 WebDriverUtils.waitForElementPresent(driver, lmp.getSubmitButton());
 	 lmp.getSubmitButton().click();
 	 //Capture the error message
-	 String actError=lmp.getPriorityLevelBlankErr().getText();
+	 String actError=lmp.getProjectNameBlankErr().getText();
 	 //Close popup window
 	 lmp.getClosePopupWin().click();
 	 Assert.assertEquals(actError, expError);
@@ -444,7 +444,7 @@ public static void verifyProjectCodeBlankError() throws InterruptedException
 	 WebDriverUtils.waitForElementPresent(driver, lmp.getSubmitButton());
 	 lmp.getSubmitButton().click();
 	 //Capture the error message
-	 String actError=lmp.getProjectNameBlankErr().getText();
+	 String actError=lmp.getProjectCodeBlankErr().getText();
 	 //Close popup window
 	 lmp.getClosePopupWin().click();
 	 Assert.assertEquals(actError, expError);
@@ -1095,7 +1095,7 @@ public static void verifyLearningNeedDescriptionBlankError() throws InterruptedE
 	 WebDriverUtils.waitForElementPresent(driver, lmp.getSubmitButton());
 	 lmp.getSubmitButton().click();
 	//Capture the error message
-	 String actError=lmp.getLearningNeedDescription().getText();
+	 String actError=lmp.getLniDescriptionEditboxBlankErr().getText();
 	 //Close popup window
 	 lmp.getClosePopupWin().click();
 	 Assert.assertEquals(actError, expError);

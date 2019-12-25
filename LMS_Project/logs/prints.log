@@ -1,5 +1,4 @@
-20:11:09.668 [main] DEBUG lms.genericLibraries.BaseClass - ---------verifyLearningNeedDescriptionBlankError :Test Started-----------
-20:13:23.466 [main] DEBUG lms.genericLibraries.BaseClass - ---------verifyLearningNeedDescriptionBlankError :Test Started-----------
-20:13:41.175 [main] INFO  lms.genericLibraries.BaseClass - Actual error is :Learning Need Description cannot be empty
-20:13:41.175 [main] INFO  lms.genericLibraries.BaseClass - ---------verifyLearningNeedDescriptionBlankError :Test ended----------
-20:14:20.296 [main] DEBUG lms.genericLibraries.BaseClass - ---------submitLniFormAndVerify :Test Started-----------
+07:17:39.554 [main] DEBUG lms.genericLibraries.BaseClass - Expected error message is :Priority Level cannot be empty
+07:17:55.796 [main] INFO  lms.genericLibraries.BaseClass - Actual error is :Priority Level cannot be empty
+07:17:55.796 [main] INFO  lms.genericLibraries.BaseClass - ---------validatePriorityBlankError :Test ended----------
+07:21:54.334 [main] DEBUG lms.genericLibraries.BaseClass - ---------submitLniFormAndVerify :Test Started-----------

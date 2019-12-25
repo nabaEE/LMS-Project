@@ -55,7 +55,7 @@ public class LNI_ManagementPage
 	private WebElement currencyDropdown;
 	@FindBy(xpath="//div[@id='div_Org_Currencies']/div/ul/li[3]/span")
 	private WebElement pickCurrencyINR;
-	@FindBy(id="Error_LNI_Description")
+	@FindBy(id="LNI_Description")
 	private WebElement learningNeedDescription;
 	@FindBy(id="Course_Coverage")
 	private WebElement courseCoverageEditbox;
