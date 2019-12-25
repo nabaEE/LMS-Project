@@ -1,0 +1,6 @@
+20:21:47.370 [main] INFO  lms.genericLibraries.BaseClass - ---------verifyProjectNameBlankError :Test ended-----------
+20:21:49.302 [main] DEBUG lms.genericLibraries.BaseClass - ---------verifySponsorerBlankErr :Test Started-----------
+20:21:49.302 [main] DEBUG lms.genericLibraries.BaseClass - Expected error message is :Sponsorer cannot be empty
+20:22:06.930 [main] INFO  lms.genericLibraries.BaseClass - Actual error is :Sponsorer cannot be empty
+20:22:06.930 [main] INFO  lms.genericLibraries.BaseClass - ---------verifySponsorerBlankErr :Test ended-----------
+20:22:08.827 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------

@@ -10,7 +10,7 @@
     <classes>
       <class name="com.lnitest.LniTest">
       <!-- <methods>
-      <include name="verifyLearningNeedDescriptionBlankError"></include>
+      <include name="submitLniFormAndVerify"></include>
       </methods> -->
       </class>
     </classes>
