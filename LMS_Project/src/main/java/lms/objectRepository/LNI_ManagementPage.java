@@ -9,7 +9,7 @@ public class LNI_ManagementPage
 	
 	@FindBy(xpath="//div[@id='AppsMenuRow']/div/div/a[4]/i")
 	private WebElement addNewButton;
-	@FindBy(xpath="//tbody[@id='TBody']/tr[1]/td[1]/span")
+	@FindBy(xpath="//tbody[@id='TBody']/tr[2]/td[1]/span/i")
 	private WebElement editLniButton;
 	@FindBy(id="LNI_Title")
 	private WebElement lniTitleEditbox;

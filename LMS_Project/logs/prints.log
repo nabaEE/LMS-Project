@@ -1,3 +1,4 @@
-20:22:17.382 [main] DEBUG lms.genericLibraries.BaseClass - --------Verify the LNI Summary page--------
-20:22:17.460 [main] INFO  lms.genericLibraries.BaseClass - The title is :LNI SUMMARY
-20:22:17.710 [main] INFO  lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test ended-----------
+23:11:07.325 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------
+23:12:15.151 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------
+23:12:27.470 [main] DEBUG lms.genericLibraries.BaseClass - ----------Verify the lni title------------
+23:12:27.475 [main] INFO  lms.genericLibraries.BaseClass - The Lni title is :Rest Api

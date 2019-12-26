@@ -14,6 +14,7 @@ import lms.objectRepository.ConfigurationSetupPage;
 import lms.objectRepository.LNI_ManagementPage;
 import lms.objectRepository.LNI_modificationPage;
 import lms.objectRepository.LniSummaryPage;
+import lms.objectRepository.LoginPage;
 import lms.objectRepository.MyDashboardPage;
 
 public class LniTest extends BaseClass
@@ -153,11 +154,11 @@ lsp.getCloseLniSummaryPage().click();
 log.info("---------view_Lni_Summary :Test ended-----------");
   }
 //3. Modify the LNI Title then click on submit and verify.
-@Test(enabled=false)
+@Test()
 public static void modifyLniDetailsAndVerify() throws InterruptedException
 {
 	log.debug("---------view_Lni_Summary :Test started-----------");
-	String lniTitle="Python Learning";
+	String lniTitle="Rest Api";
 	MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
 	Thread.sleep(3000);
 	//Click on admin icon
@@ -191,12 +192,6 @@ public static void modifyLniDetailsAndVerify() throws InterruptedException
 	lmp1.getSaveAndProceedButton().click();
 	//Capture the modified Lni title
 	 String actTitle= lsp.getLniSummaryTitle().getText();
-	//Capture windows session Ids
-	Set<String> ids= driver.getWindowHandles();
-	Iterator<String> its= ids.iterator();
-	String pWin=its.next();
-	String cWin=its.next();
-	driver.switchTo().window(pWin);
 	log.debug("----------Verify the lni title------------");
 	Assert.assertEquals(actTitle, lniTitle);
 	log.info("The Lni title is :"+actTitle);
@@ -1110,8 +1105,20 @@ public static void verifyLearningNeedDescriptionBlankError() throws InterruptedE
 	 Assert.assertEquals(actError, expError);
 	 log.info("Actual error is :"+actError);	
 	 log.info("---------verifyLearningNeedDescriptionBlankError :Test ended----------");	
+  }
+//15. Login as the reporting manager to approve the LNI Request.
+@Test()
+public static void approveLNIRequest() throws InterruptedException
+{
+ //Call login page
+	LoginPage lp= PageFactory.initElements(driver, LoginPage.class);
+	WebDriverUtils.waitForPageToLoad(driver);
+	Thread.sleep(2000);
+	lp.logOut();
+	driver.switchTo().frame(lp.getAccessFrameToLogin());
+	lp.loginToPage("sujit.sahoo@trianz.com", "NeWTesT@19");
+	
 }
-
 
 }
 

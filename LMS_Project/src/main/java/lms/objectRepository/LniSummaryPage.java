@@ -14,7 +14,7 @@ private WebElement clickEligibility;
 private WebElement saveAndContinueButton;
 @FindBy(id="Remarks")
 private WebElement remarksEditbox;
-@FindBy(xpath="//div[@id='PopUpCont']/div[1]/span")
+@FindBy(xpath="//form[@id='E2ProForm_1994']/div[1]/div[1]/div/fieldset/div[2]/div[1]/p/span")
 private WebElement lniSummaryTitle;
 @FindBy(xpath="//div[@id='PopUpCont']/div[1]/button/i")
 private WebElement closeLniSummaryPage;

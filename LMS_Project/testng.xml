@@ -9,9 +9,9 @@
   <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.lnitest.LniTest">
-      <!-- <methods>
-      <include name="submitLniFormAndVerify"></include>
-      </methods> -->
+      <methods>
+      <include name="approveLNIRequest"></include>
+      </methods>
       </class>
     </classes>
 </test>

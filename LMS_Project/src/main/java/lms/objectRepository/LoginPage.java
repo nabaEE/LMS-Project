@@ -19,6 +19,13 @@ public class LoginPage
 	private WebElement dropDownArrow;
 	@FindBy(linkText="Logout")
 	private WebElement logoutBtn;
+	@FindBy(xpath="//html//frameset//frameset//frame")
+	private WebElement accessFrameToLogin;
+	/********************************Getters Usage*****************************************/
+	public WebElement getAccessFrameToLogin()
+	{
+		return accessFrameToLogin;
+	}
 	/************************************Utilization******************************************/
 	public void loginToPage(String username, String password)
 	{
