@@ -11,9 +11,9 @@
       <class name="com.lnitest.LniTest">
         <methods>
           <include name="tearDown"/>
+          <include name="submitLNIAndpproveRequest"/>
           <include name="login"/>
           <include name="closeBrowser"/>
-          <include name="approveLNIRequest"/>
           <include name="openBrowser"/>
         </methods>
       </class> <!-- com.lnitest.LniTest -->

@@ -1,0 +1,5 @@
+14:49:53.505 [main] DEBUG lms.genericLibraries.BaseClass - -----------submitLNIAndpproveRequest : Test Started-------------
+14:55:45.597 [main] DEBUG lms.genericLibraries.BaseClass - -----------submitLNIAndpproveRequest : Test Started-------------
+14:55:59.916 [main] DEBUG lms.genericLibraries.BaseClass - Capture the submitted LNI Title
+15:20:26.753 [main] DEBUG lms.genericLibraries.BaseClass - -----------submitLNIAndpproveRequest : Test Started-------------
+15:20:41.074 [main] DEBUG lms.genericLibraries.BaseClass - Capture the submitted LNI Title

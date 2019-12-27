@@ -1286,8 +1286,6 @@ public static void submitLNIAndpproveRequest() throws Exception
     log.debug("-----Verify the approval message-------");
     Assert.assertEquals(actMessage, expMessage);
     log.info("Actual message is :"+actMessage);
-   
-    
     WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
     Thread.sleep(2000);
     lp.logOut();
