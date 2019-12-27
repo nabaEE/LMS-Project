@@ -3,6 +3,7 @@ package com.lnitest;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -1108,17 +1109,88 @@ public static void verifyLearningNeedDescriptionBlankError() throws InterruptedE
   }
 //15. Login as the reporting manager to approve the LNI Request.
 @Test()
-public static void approveLNIRequest() throws InterruptedException
+public static void approveLNIRequest() throws Exception
 {
  //Call login page
 	LoginPage lp= PageFactory.initElements(driver, LoginPage.class);
 	WebDriverUtils.waitForPageToLoad(driver);
 	Thread.sleep(2000);
+	WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
+	//Click on logout
 	lp.logOut();
-	driver.switchTo().frame(lp.getAccessFrameToLogin());
-	lp.loginToPage("sujit.sahoo@trianz.com", "NeWTesT@19");
-	
-}
+	//Click on click here to login
+	lp.getClickHereToLogin().click();
+	//Enter approval username and password
+	lp.getUserNameEdt().sendKeys("sujit.sahoo@trianz.com");
+	lp.getpassWordEdt().sendKeys("NeWTesT@19");
+	//Click on login
+	lp.getLoginBtn().click();
+	//Call the my dashboard page
+   MyDashboardPage md= PageFactory.initElements(driver, MyDashboardPage.class);
+  driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
+  //Click on approval button
+   md.getEmployeeApprovalButton().click();
+   WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
+   Thread.sleep(2000);
+   lp.logOut();
+ //Click on click here to login
+ 	lp.getClickHereToLogin().click();
+ 	//Enter approval username and password
+ 	lp.getUserNameEdt().sendKeys("anita.pinto@trianz.com");
+ 	lp.getpassWordEdt().sendKeys("NeWTesT@19");
+ 	//Click on login
+ 	lp.getLoginBtn().click();
+ 	//Call the my dashboard page
+    driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
+    WebDriverUtils.waitForElementPresent(driver, md.getEmployeeApprovalButton());
+   //Click on approval button
+    md.getAdminApprovalButton().click();
+    WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
+    Thread.sleep(2000);
+    lp.logOut();
+    driver.switchTo().defaultContent();
+
+  }
+@Test()
+public static void AddAndVerifyEligibility() throws InterruptedException
+{
+	 log.debug("---------AddAndVerifyEligibility :Test Started-----------");
+	 //Call the My Dashboard page
+	 MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
+    //Click on Learning Request on landing page
+	 WebDriverUtils.waitForElementPresent(driver, mdp.getLearningRequestButton());
+	 Thread.sleep(2000);
+	 //Click on Learning Request
+	 mdp.getLearningRequestButton().click();
+	 //Call the LNI manangement page
+	 LNI_ManagementPage lmp= PageFactory.initElements(driver, LNI_ManagementPage.class);
+	 //Click on LNI edit icon
+	 lmp.getEditLniButton().click();
+	 //Call LNI Summary page
+	 LniSummaryPage lsp= PageFactory.initElements(driver, LniSummaryPage.class);
+	 //Click on eligibility modify Icon
+	 lsp.getClickEligibility().click();
+	 //Click on eligibility checkbox
+	 lsp.getClickEligibilityCheckbox().click();
+	 //Click on select all location checkbox
+	 lsp.getClickSelectAllLocationCheckbox().click();
+	 //Click on chennai location
+	 lsp.getClickChennaiLocation().click();
+	 //Click on save and continue button
+	 lsp.getSaveAndContinueButton().click();
+	 //Declare the selected location
+	 String expLocation="Chennai";
+	 log.debug("Expected location is :"+expLocation);
+	 //Capture the selected location
+	 String actLocation=lsp.getCheckEnteredLocation().getText();
+	 log.debug("---------Verify the entered location----------");
+	 Assert.assertEquals(actLocation, expLocation);
+	 log.info("Selected location is :"+actLocation);
+	 
+	 log.info("---------AddAndVerifyEligibility :Test ended-----------");
+	 
+	 }
+
 
 }
 

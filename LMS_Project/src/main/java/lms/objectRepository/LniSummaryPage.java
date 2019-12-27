@@ -20,11 +20,35 @@ private WebElement lniSummaryTitle;
 private WebElement closeLniSummaryPage;
 @FindBy(xpath="//form[@id='E2ProForm_1994']/div/div[1]/div/fieldset/legend/span/i")
 private WebElement lniSummaryEditButton;
+@FindBy(xpath="//div[@id='EligibilityDiv']/p[2]/label/span")
+private WebElement clickEligibilityCheckbox;
+@FindBy(xpath="//fieldset[@id='Field_Location']/p/label/span")
+private WebElement clickSelectAllLocationCheckbox;
+@FindBy(xpath="//span[@id='LocationsCheckBoxes']/div/div/p/label/span[text()='Chennai']")
+private WebElement clickChennaiLocation;
+@FindBy(xpath="//tbody/tr/td[1]")
+private WebElement checkEnteredLocation;
 	
 	
 	
 	
 /***************Getters Usage*************/
+public WebElement getCheckEnteredLocation()
+{
+	return checkEnteredLocation;
+}
+public WebElement getClickChennaiLocation()
+{
+	return clickChennaiLocation;
+}
+public WebElement getClickSelectAllLocationCheckbox()
+{
+	return clickSelectAllLocationCheckbox;
+}
+public WebElement getClickEligibilityCheckbox()
+{
+	return clickEligibilityCheckbox;
+}
 public WebElement getLniSummaryEditButton()
 {
 	return lniSummaryEditButton;

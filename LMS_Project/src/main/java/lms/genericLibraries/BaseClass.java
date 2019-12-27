@@ -64,7 +64,7 @@ public void login() throws IOException
  driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
  }
 @AfterMethod
-public void tearDown() throws Exception
+public static void tearDown() throws Exception
 {
 		 lms.objectRepository.LoginPage lp=PageFactory.initElements(driver, lms.objectRepository.LoginPage.class);
 		 //call the logout method declared in LoginPage

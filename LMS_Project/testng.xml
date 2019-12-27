@@ -10,7 +10,7 @@
     <classes>
       <class name="com.lnitest.LniTest">
       <methods>
-      <include name="approveLNIRequest"></include>
+      <include name="AddAndVerifyEligibility"></include>
       </methods>
       </class>
     </classes>

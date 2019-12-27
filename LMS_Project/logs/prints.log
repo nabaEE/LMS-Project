@@ -1,4 +1,0 @@
-23:11:07.325 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------
-23:12:15.151 [main] DEBUG lms.genericLibraries.BaseClass - ---------view_Lni_Summary :Test started-----------
-23:12:27.470 [main] DEBUG lms.genericLibraries.BaseClass - ----------Verify the lni title------------
-23:12:27.475 [main] INFO  lms.genericLibraries.BaseClass - The Lni title is :Rest Api

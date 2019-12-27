@@ -21,10 +21,36 @@ public class LoginPage
 	private WebElement logoutBtn;
 	@FindBy(xpath="//html//frameset//frameset//frame")
 	private WebElement accessFrameToLogin;
+	@FindBy(xpath="//div[@class='row logout-box']/div[2]/div[3]/label/a")
+	private WebElement clickHereToLogin;
 	/********************************Getters Usage*****************************************/
 	public WebElement getAccessFrameToLogin()
 	{
 		return accessFrameToLogin;
+	}
+	public WebElement getClickHereToLogin()
+	{
+		return clickHereToLogin;
+	}
+	public WebElement getUserNameEdt()
+	{
+		return userNameEdt;
+	}
+	public WebElement getpassWordEdt()
+	{
+		return passWordEdt;
+	}
+	public WebElement getLoginBtn()
+	{
+		return loginBtn;
+	}
+	public WebElement getLogoutBtn()
+	{
+		return logoutBtn;
+	}
+	public WebElement getDropDownArrow()
+	{
+		return dropDownArrow;
 	}
 	/************************************Utilization******************************************/
 	public void loginToPage(String username, String password)
@@ -36,6 +62,7 @@ public class LoginPage
 	 }
 	  public void logOut()
 	  {
+	  WebDriverUtils.waitForPageToLoad(BaseClass.driver);
 	  WebDriverUtils.waitForElementPresent(BaseClass.driver, dropDownArrow);
 	  dropDownArrow.click();
 	  logoutBtn.click();
