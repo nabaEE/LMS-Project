@@ -17,6 +17,7 @@ import lms.objectRepository.LNI_modificationPage;
 import lms.objectRepository.LniSummaryPage;
 import lms.objectRepository.LoginPage;
 import lms.objectRepository.MyDashboardPage;
+import lms.objectRepository.PendingApprovalPage;
 
 public class LniTest extends BaseClass
 {
@@ -1107,57 +1108,14 @@ public static void verifyLearningNeedDescriptionBlankError() throws InterruptedE
 	 log.info("Actual error is :"+actError);	
 	 log.info("---------verifyLearningNeedDescriptionBlankError :Test ended----------");	
   }
-//15. Login as the reporting manager to approve the LNI Request.
-@Test()
-public static void approveLNIRequest() throws Exception
-{
- //Call login page
-	LoginPage lp= PageFactory.initElements(driver, LoginPage.class);
-	WebDriverUtils.waitForPageToLoad(driver);
-	Thread.sleep(2000);
-	WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
-	//Click on logout
-	lp.logOut();
-	//Click on click here to login
-	lp.getClickHereToLogin().click();
-	//Enter approval username and password
-	lp.getUserNameEdt().sendKeys("sujit.sahoo@trianz.com");
-	lp.getpassWordEdt().sendKeys("NeWTesT@19");
-	//Click on login
-	lp.getLoginBtn().click();
-	//Call the my dashboard page
-   MyDashboardPage md= PageFactory.initElements(driver, MyDashboardPage.class);
-  driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
-  //Click on approval button
-   md.getEmployeeApprovalButton().click();
-   WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
-   Thread.sleep(2000);
-   lp.logOut();
- //Click on click here to login
- 	lp.getClickHereToLogin().click();
- 	//Enter approval username and password
- 	lp.getUserNameEdt().sendKeys("anita.pinto@trianz.com");
- 	lp.getpassWordEdt().sendKeys("NeWTesT@19");
- 	//Click on login
- 	lp.getLoginBtn().click();
- 	//Call the my dashboard page
-    driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
-    WebDriverUtils.waitForElementPresent(driver, md.getEmployeeApprovalButton());
-   //Click on approval button
-    md.getAdminApprovalButton().click();
-    WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
-    Thread.sleep(2000);
-    lp.logOut();
-    driver.switchTo().defaultContent();
-
-  }
+//15. Submit the Eligibility section with picking location then verify it.
 @Test()
 public static void AddAndVerifyEligibility() throws InterruptedException
 {
 	 log.debug("---------AddAndVerifyEligibility :Test Started-----------");
 	 //Call the My Dashboard page
 	 MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
-    //Click on Learning Request on landing page
+  //Click on Learning Request on landing page
 	 WebDriverUtils.waitForElementPresent(driver, mdp.getLearningRequestButton());
 	 Thread.sleep(2000);
 	 //Click on Learning Request
@@ -1186,10 +1144,158 @@ public static void AddAndVerifyEligibility() throws InterruptedException
 	 log.debug("---------Verify the entered location----------");
 	 Assert.assertEquals(actLocation, expLocation);
 	 log.info("Selected location is :"+actLocation);
-	 
 	 log.info("---------AddAndVerifyEligibility :Test ended-----------");
-	 
-	 }
+}
+//16. Login as employee then submit the LNI request and verify the approval section. 
+@Test()
+public static void submitLNIAndpproveRequest() throws Exception
+{
+	log.debug("-----------submitLNIAndpproveRequest : Test Started-------------");
+	 String expLniTitle="SDLC Phases";
+	 //Call the My Dashboard page
+	 MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
+	 Thread.sleep(3000);
+	 //Click on admin icon
+	 WebDriverUtils.waitForElementPresent(driver, mdp.getAdminIcon());
+	//Click on Learning Request
+	 Thread.sleep(2000);
+	 mdp.getLearningRequestButton().click();
+	 LNI_ManagementPage lmp= PageFactory.initElements(driver, LNI_ManagementPage.class);
+	 //Click on add new button
+	 Thread.sleep(2000);
+	 WebDriverUtils.waitForElementPresent(driver, lmp.getAddNewButton());
+	 lmp.getAddNewButton().click();
+	 //Click on LNI Title and enter values in it.
+	 WebDriverUtils.waitForElementPresent(driver, lmp.getLniTitleEditbox());
+	 Thread.sleep(2000);
+	 lmp.getLniTitleEditbox().sendKeys(expLniTitle);
+	 //Enter project name
+	 lmp.getProjectNameEditbox().sendKeys("dhtml setup");
+	 //Enter the project code
+	 lmp.getProjectCode().sendKeys("80");
+	 //Click on sponsorer dropdown and pick trianz university
+	 lmp.getSponsorerDropdown().click();
+	 lmp.getSelectTrianzUniversity().click();
+	 //Click learning type dropdown and pick Skill Type
+	 lmp.getLearningTypeDropdown().click();
+	 lmp.getSelectSkillBased().click();
+	 //Click on scope dropdown and pick Technical.
+	 lmp.getScopeDropdown().click();
+	 lmp.getPickScopeAsTechnical().click();
+	 //Click on Classification dropdown and pick Project.
+	 lmp.getClassificationDropdown().click();
+	 lmp.getSelectClassificationAsProject().click();
+	 //Click on Priority level dropdown and select "Within 1Month".
+	 lmp.getPriorityLevelDropdown().click();
+	 lmp.getSelectPriorityAs_1Month().click();
+	 //Click on duration editbox.
+	 lmp.getDurationEditbox().sendKeys("90");
+	 //Enter number of people.
+	 lmp.getPeopleEditbox().sendKeys("60");
+	 //Click current expertise and pick Beginner.
+	 lmp.getCurrentExpertiseDropdown().click();
+	 lmp.getSelectBeginner().click();
+	 //Click external program or certification dropdown.
+	 lmp.getCertificationSwitchButton().click();
+	 //Enter external program name
+	 lmp.getExternalProgramNameEditbox().sendKeys("Yash rao");
+	 //Enter cost 
+	 lmp.getCostEditbox().sendKeys("1000");
+	 //Click and Select currency
+	 lmp.getCurrencyDropdown().click();
+	 lmp.getPickCurrencyINR().click();
+	 //Enter Learning Need description
+	 lmp.getLearningNeedDescription().sendKeys("NA");
+	 //Enter course coverage
+	 lmp.getCourseCoverageEditbox().sendKeys("NA");
+	 //Enter Business Benefits
+	 lmp.getBusinessBenefitsEditbox().sendKeys("NA");
+	 //Click on save and proceed button
+	 WebDriverUtils.waitForElementPresent(driver, lmp.getSubmitButton());
+	 lmp.getSubmitButton().click();
+	 //Call the LNI Summary page
+	 LniSummaryPage lns= PageFactory.initElements(driver, LniSummaryPage.class);
+	 log.debug("Capture the submitted LNI Title");
+	 String actTitle=lns.getLniTitle().getText();
+	 //Click on eligibility 
+	 try {
+		  lns.getClickEligibility().click(); 
+		  lns.getSaveAndContinueButton().click();
+		  }
+	  catch(StaleElementReferenceException e)
+	  {
+	  lns.getSaveAndContinueButton().click();
+	  }
+			 
+	 //Enter remarks in the editbox
+	 lns.getRemarksEditbox().sendKeys("Submitting the LNI Form");
+	 //Click on submit
+	 lns.getSaveAndContinueButton().click();
+    //Call login page
+	LoginPage lp= PageFactory.initElements(driver, LoginPage.class);
+	WebDriverUtils.waitForPageToLoad(driver);
+	Thread.sleep(2000);
+	WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
+	//Click on logout
+	lp.logOut();
+	//Click on click here to login
+	lp.getClickHereToLogin().click();
+	//Enter approval username and password
+	lp.getUserNameEdt().sendKeys("Ganeshan.Venkat@trianz.com");
+	lp.getpassWordEdt().sendKeys("NeWTesT@19");
+	//Click on login
+	lp.getLoginBtn().click();
+	//Call the my dashboard page
+   MyDashboardPage md= PageFactory.initElements(driver, MyDashboardPage.class);
+   driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
+  //Click on approval button
+   md.getEmployeeApprovalButton().click();
+   //Call the approval page
+   PendingApprovalPage pap= PageFactory.initElements(driver, PendingApprovalPage.class);
+   //Click on pencil icon
+   WebDriverUtils.waitForElementPresent(driver, pap.getClickPencilIcon());
+   pap.getClickPencilIcon().click();
+   //enter remarks and click on approve
+   pap.getRemarksEditbox().sendKeys("Submit");
+   pap.getApproveButton().click();
+   WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
+   Thread.sleep(2000);
+   lp.logOut();
+ //Click on click here to login
+ 	lp.getClickHereToLogin().click();
+ 	//Enter approval username and password
+ 	lp.getUserNameEdt().sendKeys("anita.pinto@trianz.com");
+ 	lp.getpassWordEdt().sendKeys("NeWTesT@19");
+ 	//Click on login
+ 	lp.getLoginBtn().click();
+ 	//Call the my dashboard page
+    driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
+    WebDriverUtils.waitForElementPresent(driver, md.getEmployeeApprovalButton());
+   //Click on approval button
+    md.getAdminApprovalButton().click();
+    //Click on pencil icon
+    WebDriverUtils.waitForElementPresent(driver, pap.getClickPencilIcon());
+    pap.getClickPencilIcon().click();
+    //enter remarks and click on approve
+    pap.getRemarksEditbox().sendKeys("Submit");
+    pap.getApproveButton().click();
+    String expMessage="Transaction is Approved.";
+    log.debug("Expected toast message is :"+expMessage);
+    //Capture the actual message
+    String actMessage=pap.getApprovalMessage().getText();
+    log.debug("-----Verify the approval message-------");
+    Assert.assertEquals(actMessage, expMessage);
+    log.info("Actual message is :"+actMessage);
+   
+    
+    WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
+    Thread.sleep(2000);
+    lp.logOut();
+    
+   log.info("-----------submitLNIAndpproveRequest : Test Ended-------------");
+    
+}
+
 
 
 }

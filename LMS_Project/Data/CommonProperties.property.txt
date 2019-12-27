@@ -1,4 +1,4 @@
 URL:http://newtest.employeeexperts.com/
-USERNAME:anita.pinto@trianz.com
+USERNAME:sujit.sahoo@trianz.com
 PASSWORD:NeWTesT@19
-BROWSER: chrome
+BROWSER: firefox

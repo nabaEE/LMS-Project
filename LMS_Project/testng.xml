@@ -10,9 +10,9 @@
     <classes>
       <class name="com.lnitest.LniTest">
       <methods>
-      <include name="AddAndVerifyEligibility"></include>
+      <include name="submitLNIAndpproveRequest"></include>
       </methods>
       </class>
-    </classes>
+   </classes>
 </test>
 </suite>
