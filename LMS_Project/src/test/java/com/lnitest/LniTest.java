@@ -26,7 +26,7 @@ public class LniTest extends BaseClass
 public static void submitLniFormAndVerify() throws InterruptedException
 {
  log.debug("---------submitLniFormAndVerify :Test Started-----------");
- String expLniTitle="Unit Testing";
+ String expLniTitle="Jason Learning";
  //Call the My Dashboard page
  MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
  Thread.sleep(3000);
@@ -1151,7 +1151,7 @@ public static void AddAndVerifyEligibility() throws InterruptedException
 public static void submitLNIAndpproveRequest() throws Exception
 {
 	log.debug("-----------submitLNIAndpproveRequest : Test Started-------------");
-	 String expLniTitle="SDLC Phases";
+	 String expLniTitle="Jason Learning";
 	 //Call the My Dashboard page
 	 MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
 	 Thread.sleep(3000);
@@ -1291,6 +1291,7 @@ public static void submitLNIAndpproveRequest() throws Exception
     lp.logOut();
     
    log.info("-----------submitLNIAndpproveRequest : Test Ended-------------");
+   driver.close();
     
 }
 
