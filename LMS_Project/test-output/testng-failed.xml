@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="lms.genericLibraries.ListenerImplemention"/>
-    <listener class-name="lms.genericLibraries.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.lnitest.LniTest">
         <methods>
+          <include name="verifyDurationEditboxBlankError"/>
           <include name="tearDown"/>
+          <include name="modifyLniDetailsAndVerify"/>
           <include name="submitLNIAndpproveRequest"/>
+          <include name="verifyLniTitleBlankError"/>
           <include name="login"/>
           <include name="closeBrowser"/>
+          <include name="validatePriorityBlankError"/>
+          <include name="verifyProjectNameBlankError"/>
+          <include name="verifyLearningNeedDescriptionBlankError"/>
+          <include name="checkCurrentExpertiseBlankError"/>
+          <include name="verifyLearningTypeBlankError"/>
+          <include name="verifyPeopleEditboxBlankError"/>
+          <include name="verifySponsorerBlankErr"/>
           <include name="openBrowser"/>
+          <include name="validateClassificationBlankError"/>
+          <include name="verifyProjectCodeBlankError"/>
+          <include name="view_Lni_SummaryAndVerify"/>
+          <include name="AddAndVerifyEligibility"/>
+          <include name="submitLniFormAndVerify"/>
         </methods>
       </class> <!-- com.lnitest.LniTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

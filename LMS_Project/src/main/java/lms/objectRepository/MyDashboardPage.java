@@ -15,7 +15,7 @@ private WebElement configurationSetupButton;
 private WebElement employeeApprovalButton;
 @FindBy(xpath="//ul[@class='right hide-on-med-and-down']/li[5]/a")
 private WebElement adminApprovalButton;
-@FindBy(xpath="//div[@id='firstPanel']/div/div[2]/ul/div[4]/li/p")
+@FindBy(xpath="//div[@id='firstPanel']/div/div[2]/ul/div[5]/li/p")
 private WebElement learningRequestButton;
 
 /****************Getters Usage********************/

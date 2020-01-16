@@ -1151,7 +1151,7 @@ public static void AddAndVerifyEligibility() throws InterruptedException
 public static void submitLNIAndpproveRequest() throws Exception
 {
 	log.debug("-----------submitLNIAndpproveRequest : Test Started-------------");
-	 String expLniTitle="Jason Learning";
+	 String expLniTitle="Data Science2 Learning";
 	 //Call the My Dashboard page
 	 MyDashboardPage mdp= PageFactory.initElements(driver, MyDashboardPage.class);
 	 Thread.sleep(3000);
@@ -1271,6 +1271,7 @@ public static void submitLNIAndpproveRequest() throws Exception
  	//Call the my dashboard page
     driver.switchTo().frame(driver.findElement(By.xpath("//html//frameset//frame")));
     WebDriverUtils.waitForElementPresent(driver, md.getEmployeeApprovalButton());
+    Thread.sleep(2000);
    //Click on approval button
     md.getAdminApprovalButton().click();
     //Click on pencil icon
@@ -1289,13 +1290,9 @@ public static void submitLNIAndpproveRequest() throws Exception
     WebDriverUtils.waitForElementPresent(driver, lp.getDropDownArrow());
     Thread.sleep(2000);
     lp.logOut();
-    
    log.info("-----------submitLNIAndpproveRequest : Test Ended-------------");
    driver.close();
-    
-}
-
-
+    }
 
 }
 
