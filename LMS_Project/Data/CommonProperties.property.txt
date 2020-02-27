@@ -1,4 +1,4 @@
 URL:http://newtest.employeeexperts.com/
-USERNAME:sujit.sahoo@trianz.com
-PASSWORD:NeWTesT@19
+USERNAME:
+PASSWORD:
 BROWSER: firefox
